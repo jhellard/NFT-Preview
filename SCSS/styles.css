@@ -1,0 +1,186 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: hsl(217deg, 54%, 11%);
+}
+
+.card {
+  width: min(100% - 2rem, 350px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: hsl(216deg, 50%, 16%);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+.card .preview {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+.card .preview:hover .preview__eye {
+  opacity: 1;
+}
+.card .preview:hover .preview__overlay {
+  opacity: 0.5;
+}
+.card .preview__image {
+  border-radius: 15px;
+}
+.card .preview__eye {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transition: opacity 0.1s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+.card .preview__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  background: hsl(178deg, 100%, 50%);
+  border-radius: 15px;
+}
+.card h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.card h1:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.card p {
+  color: hsl(215deg, 51%, 70%);
+  margin-bottom: 1rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.details span {
+  display: flex;
+  min-width: 100px;
+  align-items: center;
+  color: hsl(215deg, 51%, 70%);
+}
+.details span img {
+  margin-right: 0.3125rem;
+}
+.details span:first-of-type {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.line {
+  border: none;
+  border-top: 1px solid hsl(215deg, 32%, 27%);
+  margin-bottom: 1rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.footer .avatar {
+  max-height: 35px;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.footer a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}
+.footer a:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+.footer p {
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
