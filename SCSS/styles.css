@@ -90,40 +90,6 @@ body {
   background-color: hsl(216deg, 50%, 16%);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
-.card .preview {
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 1.25rem;
-}
-.card .preview:hover .preview__eye {
-  opacity: 1;
-}
-.card .preview:hover .preview__overlay {
-  opacity: 0.5;
-}
-.card .preview__image {
-  border-radius: 15px;
-}
-.card .preview__eye {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 5;
-  transition: opacity 0.1s ease-in-out;
-  transform: translate(-50%, -50%);
-}
-.card .preview__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-  background: hsl(178deg, 100%, 50%);
-  border-radius: 15px;
-}
 .card h1 {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.5rem;
@@ -139,22 +105,55 @@ body {
   margin-bottom: 1rem;
 }
 
+.preview {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+.preview:hover .preview__eye {
+  opacity: 1;
+}
+.preview:hover .preview__overlay {
+  opacity: 0.5;
+}
+.preview__image {
+  border-radius: 15px;
+}
+.preview__eye {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transition: opacity 0.1s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+.preview__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  background: hsl(178deg, 100%, 50%);
+  border-radius: 15px;
+}
+
 .details {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
 }
-.details span {
-  display: flex;
-  min-width: 100px;
-  align-items: center;
+.details h2 {
   color: hsl(215deg, 51%, 70%);
 }
-.details span img {
-  margin-right: 0.3125rem;
-}
-.details span:first-of-type {
+.details h2:first-of-type {
   color: hsl(178deg, 100%, 50%);
+  margin-right: auto;
+}
+.details img {
+  margin-right: 0.3125rem;
 }
 
 .line {
@@ -168,7 +167,7 @@ body {
   align-items: center;
   margin-bottom: 0.5rem;
 }
-.footer .avatar {
+.footer__avatar {
   max-height: 35px;
   border: 1px solid hsl(0deg, 0%, 100%);
   border-radius: 50%;
